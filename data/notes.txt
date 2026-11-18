@@ -1,0 +1,26 @@
+RFC-104: Enterprise Knowledge Ingestion & RAG Standards
+Status: APPROVED | Version: 2.4 | Classification: INTERNAL ENGINEERING
+Author: AI Infrastructure & Platform Architecture Group
+Last Updated: Q3 2025
+
+1. EXECUTIVE SUMMARY & OBJECTIVE
+This document establishes mandatory data ingestion standards for all Retrieval-Augmented
+Generation (RAG) pipelines deployed within enterprise knowledge bases. Adherence to these
+guidelines ensures high vector search precision, eliminates chunk fragmentation, and
+guarantees sub-100ms P99 retrieval latency.
+
+2. DOCUMENT INGESTION SERVICE LEVEL AGREEMENTS (SLAs)
+- Ingestion Throughput: Minimum 250 pages per second across distributed worker nodes.
+- Parsing Fidelity: 100% preservation of structured tabular data into Markdown representations.
+- Metadata Completeness: All canonical Document objects must include verified source path,
+  page index, department code, and deterministic content hashes.
+
+3. SUPPORTED INGESTION CHANNELS & FORMATS
+- Technical Architecture Docs (.md, .txt): Native UTF-8 parsing with header hierarchy preserved.
+- Enterprise Financial Reports (.pdf): Table-aware bounding box extraction via PyMuPDF / Docling.
+- Metric Telemetry & Spreadsheets (.csv): Row-level document serialization with primary keys.
+- Corporate Handbooks & SOPs (.docx): Heading hierarchy and list extraction via Docx2txt.
+
+4. COMPLIANCE & GOVERNANCE
+All ingested content is subject to automated Role-Based Access Control (RBAC) filtering.
+Confidential engineering memos must never be co-indexed with public-facing customer documentation.

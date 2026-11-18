@@ -1,0 +1,9 @@
+metric_name,category,target_sla,actual_value,status,quarter,owner_team
+Retrieval Latency (P99),Performance,< 50ms,34.2ms,PASS,Q2 2025,Vector Core
+Ingestion Throughput,Scalability,> 200 pages/s,312 pages/s,PASS,Q2 2025,Data Ops
+Chunk Deduplication Rate,Cost Efficiency,> 90%,96.8%,PASS,Q2 2025,Data Ops
+Vector Memory Footprint,Infrastructure,< 32 GB,21.4 GB,PASS,Q2 2025,Platform
+Embedding Token Cost,Budget,$10000/mo,$6420/mo,UNDER_BUDGET,Q2 2025,Finance
+Top-5 Precision Recall,Accuracy,> 88%,92.4%,PASS,Q2 2025,ML Research
+Table Parsing Extraction,Accuracy,> 95%,97.1%,PASS,Q2 2025,Data Ops
+Context Window Utilization,Efficiency,< 70%,54.6%,PASS,Q2 2025,Platform
